@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(212, 225, 138);
+    color: #48441d;
+}
