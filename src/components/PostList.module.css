@@ -6,9 +6,20 @@
     box-sizing: border-box;
 }
 
+ul, li {
+    list-style: none;
+}
+
 .wrapper {
     height: 100vh;
     width: 100%;
     background-color:rgb(212, 225, 138);
     color: #48441d;
+    overflow: auto;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 800px;
 }

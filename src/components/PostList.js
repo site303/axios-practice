@@ -1,8 +1,10 @@
-import {useState, useEffect} from React;
+import {useState, useEffect} from "react";
 import axios from "axios";
-import styles from PostList.module.css;
+
+
+const PostList = () => {
 // отображение постов 
-const [posts, setPost] = useState([]);
+const [posts, setPosts] = useState([]);
 // отображение статуса загрузки 
 const [loading, setLoading] = useState(true);
 // ошибка 
@@ -19,27 +21,35 @@ setLoading(false);
         // останавливает индикатор загрузки 
         setLoading(false);
     }
+};
 
-    useEffect(() => {
-        fetchPosts();
-    },[]);
+useEffect(() => {
+    fetchPosts();
+},[]);
 
     if (loading) return <p>Загрузка...</p>
     if (error) return <p>{error}</p>
     // если загрузка завершена и ошибок нет 
 return (
     <div>
-<ul>
-{posts.map((post) => (
-<li key={post.id}>
-<h3>{post.title}</h3>
-<p>{post.body}</p>
-</li>
-))}
-</ul>
-    </div>
+    <h2>Список постов</h2>
+    <ul>
+      {posts.map((post) => (
+      <li key={post.name.common}>
+         {/* Название страны */}
+      <h3>{post.name.common}</h3> 
+      {/* Столица */}
+      <p>Столица: {post.capital ? post.capital[0] : "Нет данных"}</p> 
+      {/* Флаг */}
+      <img src={post.flags.png} alt={`Флаг ${post.name.common}`} width="100" /> 
+    </li>
+      ))}
+    </ul>
+  </div>
 )
-}
+
+ }
+
 
 export default PostList;
 
