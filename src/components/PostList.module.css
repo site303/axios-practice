@@ -23,3 +23,63 @@ ul, li {
     padding: 10px;
     max-width: 800px;
 }
+
+.prev {
+    width: 20px;
+    height: 20px;
+}
+
+.next {
+    width: 20px;
+    height: 20px;
+}
+
+/* PostList  */
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .container {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .title {
+    text-align: center;
+  }
+  
+  .postList {
+    margin-top: 20px;
+  }
+  
+  .tabsContainer {
+    text-align: center;
+  }
+  
+  .tabContent {
+    margin: 20px 0;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    background:#309eff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }

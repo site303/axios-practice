@@ -5,7 +5,7 @@ function App() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-      <h2>О разных странах</h2>
+      <h2 className={styles.title}> Different countries </h2>
       <PostList />
       </div>
     </div>
